@@ -4295,26 +4295,60 @@ async function obsidiosaurusProcess(basePath) {
   const mainFolders = getMainfolders(vaultPath);
   mainFolders.forEach((folder) => processSingleFolder(folder, vaultPath));
   if (config.debug) {
-    logger.info("\u{1F4C1} Folder structure with Files: %s", JSON.stringify(mainFolders));
+    logger.info(
+      "\u{1F4C1} Folder structure with Files: %s",
+      JSON.stringify(mainFolders)
+    );
   }
-  const allInfo = mainFolders.flatMap((folder) => folder.files.map((file) => getSourceFileInfo(basePath, folder, file, vaultPath)));
-  const allSourceFilesInfo = allInfo.filter((info) => info.type !== "assets");
-  const allSourceAssetsInfo = allInfo.filter((info) => info.type === "assets");
-  let targetJson = await initializeJsonFile(path.join(basePath, "allFilesInfo.json"));
-  let assetJson = await initializeJsonFile(path.join(basePath, "assetInfo.json"));
+  const allInfo = mainFolders.flatMap(
+    (folder) => folder.files.map(
+      (file) => getSourceFileInfo(basePath, folder, file, vaultPath)
+    )
+  );
+  const allSourceFilesInfo = allInfo.filter(
+    (info) => info.type !== "assets"
+  );
+  const allSourceAssetsInfo = allInfo.filter(
+    (info) => info.type === "assets"
+  );
+  let targetJson = await initializeJsonFile(
+    path.join(basePath, "allFilesInfo.json")
+  );
+  let assetJson = await initializeJsonFile(
+    path.join(basePath, "assetInfo.json")
+  );
   targetJson = await checkFilesExistence(targetJson);
-  const filesToDelete = await getFilesToDelete(allSourceFilesInfo, targetJson);
+  const filesToDelete = await getFilesToDelete(
+    allSourceFilesInfo,
+    targetJson
+  );
   await deleteFiles(filesToDelete, targetJson, basePath);
   await removeAssetReferences(filesToDelete, assetJson, websitePath);
-  targetJson = await writeJsonToFile(path.join(basePath, "allFilesInfo.json"), targetJson);
-  await writeJsonToFile(path.join(basePath, "allSourceAssetsInfo.json"), allSourceAssetsInfo);
+  targetJson = await writeJsonToFile(
+    path.join(basePath, "allFilesInfo.json"),
+    targetJson
+  );
+  await writeJsonToFile(
+    path.join(basePath, "allSourceAssetsInfo.json"),
+    allSourceAssetsInfo
+  );
   const filesToProcess = await compareSource(allSourceFilesInfo, targetJson);
   if (filesToProcess.length > 0) {
     new import_obsidian.Notice(`\u2699 Processing ${filesToProcess.length} Files`);
     const filesToProcessIndices = filesToProcess.map((file) => file.index);
-    const filesToMarkdownProcess = allSourceFilesInfo.filter((_, index) => filesToProcessIndices.includes(index));
-    await copyMarkdownFilesToTarget(filesToMarkdownProcess, basePath, targetJson, assetJson);
-    await writeJsonToFile(path.join(basePath, "allFilesInfo.json"), targetJson);
+    const filesToMarkdownProcess = allSourceFilesInfo.filter(
+      (_, index) => filesToProcessIndices.includes(index)
+    );
+    await copyMarkdownFilesToTarget(
+      filesToMarkdownProcess,
+      basePath,
+      targetJson,
+      assetJson
+    );
+    await writeJsonToFile(
+      path.join(basePath, "allFilesInfo.json"),
+      targetJson
+    );
   } else {
     new import_obsidian.Notice(`\u{1F4A4} Nothing to process`);
   }
@@ -4322,7 +4356,12 @@ async function obsidiosaurusProcess(basePath) {
   const assetsToProcess = await getAssetsToProcess(assetJson, websitePath);
   new import_obsidian.Notice(`\u2699 Processing ${assetsToProcess.length} Assets`);
   if (assetsToProcess.length > 0) {
-    await copyAssetFilesToTarget(vaultPath, websitePath, assetJson, assetsToProcess);
+    await copyAssetFilesToTarget(
+      vaultPath,
+      websitePath,
+      assetJson,
+      assetsToProcess
+    );
   }
   deleteUnusedFiles(targetJson, websitePath);
   logger.info("\u2705 Obsidiosaurus run successfully");
@@ -4432,7 +4471,11 @@ function processSingleFolder(folder, basePath) {
   const files = searchFilesInFolder(dirPath);
   folder.files = files;
   if (config.debug) {
-    logger.info("\u{1F4C4} Vault Files for %s: %s", folder.name, JSON.stringify(files));
+    logger.info(
+      "\u{1F4C4} Vault Files for %s: %s",
+      folder.name,
+      JSON.stringify(files)
+    );
   }
 }
 async function deleteParentDirectories(filepath) {
@@ -4445,7 +4488,9 @@ async function deleteParentDirectories(filepath) {
       }
     } catch (error) {
       if (error.code !== "ENOTEMPTY" && error.code !== "EEXIST" && error.code !== "EPERM") {
-        logger.info(`\u274C Failed to delete directory ${dirPath}: ${error}`);
+        logger.info(
+          `\u274C Failed to delete directory ${dirPath}: ${error}`
+        );
       }
       return;
     }
@@ -4462,11 +4507,19 @@ async function ensureDirectoryExistence(filePath) {
 async function compareSource(sourceJson, targetJson) {
   const filesToProcess = [];
   sourceJson.forEach((sourceFile, i) => {
-    const matchingTargetFile = targetJson.find((file) => file.pathSourceRelative === sourceFile.pathSourceRelative);
+    const matchingTargetFile = targetJson.find(
+      (file) => file.pathSourceRelative === sourceFile.pathSourceRelative
+    );
     if (!matchingTargetFile) {
-      filesToProcess.push({ index: i, reason: "Does not exist in targetJson" });
+      filesToProcess.push({
+        index: i,
+        reason: "Does not exist in targetJson"
+      });
       if (config.debug) {
-        logger.info("\u{1F4DD} File to process: %s", sourceFile.pathSourceRelative);
+        logger.info(
+          "\u{1F4DD} File to process: %s",
+          sourceFile.pathSourceRelative
+        );
       }
     }
   });
@@ -4517,25 +4570,42 @@ function sanitizeFileName(fileName) {
   return { fileNameClean: fileNameClean.trim(), fileExtension, language };
 }
 function getTargetPath(sourceFileInfo, basePath) {
-  const { type, language, pathSourceRelative, mainFolder, parentFolder, fileExtension } = sourceFileInfo;
+  const {
+    type,
+    language,
+    pathSourceRelative,
+    mainFolder,
+    parentFolder,
+    fileExtension
+  } = sourceFileInfo;
   if (!type || !language || !pathSourceRelative || !parentFolder || !fileExtension || !mainFolder) {
     logger.error("\u{1F6A8} Required properties missing on sourceFileInfo");
     throw new Error("Missing required properties on sourceFileInfo");
   }
   const isMainLanguage = language === config.mainLanguage;
   const mainPathDict = {
-    "docs": isMainLanguage ? "" : path.join("i18n", language, "docusaurus-plugin-content-docs", "current"),
-    "blog": isMainLanguage ? "" : path.join("i18n", language, "docusaurus-plugin-content-blog"),
-    "blogMulti": isMainLanguage || !mainFolder ? "" : path.join("i18n", language, `docusaurus-plugin-content-blog-${mainFolder}`),
-    "assets": path.join("static", config.docusaurusAssetSubfolderName)
+    docs: isMainLanguage ? "" : path.join(
+      "i18n",
+      language,
+      "docusaurus-plugin-content-docs",
+      "current"
+    ),
+    blog: isMainLanguage ? "" : path.join("i18n", language, "docusaurus-plugin-content-blog"),
+    blogMulti: isMainLanguage || !mainFolder ? "" : path.join(
+      "i18n",
+      language,
+      `docusaurus-plugin-content-blog-${mainFolder}`
+    ),
+    assets: path.join("static", config.docusaurusAssetSubfolderName)
   };
   const mainPath = mainPathDict[type] || "";
   let finalPathSourceRelative = pathSourceRelative;
   if (parentFolder.endsWith("+")) {
     const pathParts = finalPathSourceRelative.split(path.sep);
     pathParts.pop();
-    pathParts.shift();
-    console.log(`\u274C ${pathParts}`);
+    if (!isMainLanguage) {
+      pathParts.shift();
+    }
     if (pathParts.length > 0) {
       let lastPart = pathParts[pathParts.length - 1];
       if (lastPart.endsWith("+")) {
@@ -4545,30 +4615,61 @@ function getTargetPath(sourceFileInfo, basePath) {
       finalPathSourceRelative = pathParts.join(path.sep) + fileExtension;
     }
   }
-  finalPathSourceRelative = finalPathSourceRelative.replace(`__${language}`, "");
+  finalPathSourceRelative = finalPathSourceRelative.replace(
+    `__${language}`,
+    ""
+  );
   if (finalPathSourceRelative.endsWith(".yml.md")) {
-    finalPathSourceRelative = finalPathSourceRelative.replace(".yml.md", ".yml");
+    finalPathSourceRelative = finalPathSourceRelative.replace(
+      ".yml.md",
+      ".yml"
+    );
   }
-  sourceFileInfo.pathTargetRelative = path.join(mainPath, finalPathSourceRelative);
-  sourceFileInfo.pathTargetAbsolute = path.join(basePath, config.docusaurusWebsiteDirectory, sourceFileInfo.pathTargetRelative);
+  sourceFileInfo.pathTargetRelative = path.join(
+    mainPath,
+    finalPathSourceRelative
+  );
+  sourceFileInfo.pathTargetAbsolute = path.join(
+    basePath,
+    config.docusaurusWebsiteDirectory,
+    sourceFileInfo.pathTargetRelative
+  );
   return sourceFileInfo;
 }
 async function getFilesToDelete(allSourceFilesInfo, targetJson) {
   const sourceJson = allSourceFilesInfo;
   const filesToDelete = [];
   targetJson.forEach((targetFile, i) => {
-    const matchingSourceFile = sourceJson.find((file) => file.pathSourceRelative === targetFile.pathSourceRelative);
+    const matchingSourceFile = sourceJson.find(
+      (file) => file.pathSourceRelative === targetFile.pathSourceRelative
+    );
     const targetDate = new Date(targetFile.dateModified);
     const sourceDate = (matchingSourceFile == null ? void 0 : matchingSourceFile.dateModified) ? new Date(matchingSourceFile.dateModified) : null;
     if (!matchingSourceFile) {
-      filesToDelete.push({ index: i, reason: "it does not exist in sourceJson", pathKey: targetFile.pathSourceRelative });
+      filesToDelete.push({
+        index: i,
+        reason: "it does not exist in sourceJson",
+        pathKey: targetFile.pathSourceRelative
+      });
       if (config.debug) {
-        logger.info("\u{1F5D1}\uFE0F File to delete: %s", targetFile.pathSourceRelative);
+        logger.info(
+          "\u{1F5D1}\uFE0F File to delete: %s",
+          targetFile.pathSourceRelative
+        );
       }
     } else if (sourceDate && targetDate.getTime() < sourceDate.getTime()) {
-      filesToDelete.push({ index: i, reason: `its last modification date ${targetDate} is older than the date in sourceJson ${sourceDate}`, pathKey: targetFile.pathSourceRelative });
+      filesToDelete.push({
+        index: i,
+        reason: `its last modification date ${targetDate} is older than the date in sourceJson ${sourceDate}`,
+        pathKey: targetFile.pathSourceRelative
+      });
       if (config.debug) {
-        logger.info("\u{1F504} File to update: %s, Target: %s Source: %s", targetFile.pathSourceRelative, targetDate, sourceDate);
+        logger.info(
+          "\u{1F504} File to update: %s, Target: %s Source: %s",
+          targetFile.pathSourceRelative,
+          targetDate,
+          sourceDate
+        );
       }
     }
   });
@@ -4580,20 +4681,34 @@ async function deleteFiles(filesToDelete, targetJson, basePath) {
   for (const fileToDelete of filesToDelete) {
     const targetFile = targetJson[fileToDelete.index];
     try {
-      await fs.promises.unlink(path.join(basePath, targetFile.pathTargetRelative));
+      await fs.promises.unlink(
+        path.join(basePath, targetFile.pathTargetRelative)
+      );
       if (config.debug) {
-        logger.info(`\u2705 Successfully deleted file %s`, targetFile.pathTargetRelative);
+        logger.info(
+          `\u2705 Successfully deleted file %s`,
+          targetFile.pathTargetRelative
+        );
       }
-      await deleteParentDirectories(path.join(basePath, targetFile.pathTargetRelative));
+      await deleteParentDirectories(
+        path.join(basePath, targetFile.pathTargetRelative)
+      );
       targetJson.splice(fileToDelete.index, 1);
     } catch (error) {
       if (error.code !== "ENOENT") {
-        logger.error(`\u274C Failed to delete file %s: %s`, targetFile.pathTargetRelative, error);
+        logger.error(
+          `\u274C Failed to delete file %s: %s`,
+          targetFile.pathTargetRelative,
+          error
+        );
         errors.push(error);
         continue;
       }
       if (config.debug) {
-        logger.info(`\u{1F5D1}\uFE0F File %s was not found, considered as deleted`, targetFile.pathTargetRelative);
+        logger.info(
+          `\u{1F5D1}\uFE0F File %s was not found, considered as deleted`,
+          targetFile.pathTargetRelative
+        );
       }
       targetJson.splice(fileToDelete.index, 1);
     }
@@ -4604,7 +4719,9 @@ async function checkFilesExistence(targetJson) {
     targetJson.map(async (fileInfo) => {
       try {
         await fs.promises.access(fileInfo.pathTargetAbsolute);
-        const stats = await fs.promises.stat(fileInfo.pathTargetAbsolute);
+        const stats = await fs.promises.stat(
+          fileInfo.pathTargetAbsolute
+        );
         fileInfo.dateModifiedTarget = stats.mtime;
         fileInfo.sizeTarget = stats.size;
         return fileInfo;
@@ -4646,7 +4763,9 @@ function deleteUnusedFiles(json, websitePath) {
     }
   });
   const allDirectories = fs.readdirSync(websitePath, { withFileTypes: true });
-  const otherDirectories = allDirectories.filter((dir) => dir.name.endsWith(blogSuffix));
+  const otherDirectories = allDirectories.filter(
+    (dir) => dir.name.endsWith(blogSuffix)
+  );
   otherDirectories.forEach((dir) => {
     const dirPath = path.join(websitePath, dir.name);
     exploreDirectory(dirPath);
@@ -4665,20 +4784,35 @@ async function copyMarkdownFilesToTarget(files, basePath, targetJson, assetJson)
     const { pathTargetAbsolute, pathSourceAbsolute, pathSourceRelative } = file;
     if (pathTargetAbsolute && pathSourceAbsolute && pathSourceRelative) {
       await ensureDirectoryExistence(pathTargetAbsolute);
-      const sourceContent = await fs.promises.readFile(pathSourceAbsolute, "utf-8");
-      const transformedContent = await processMarkdown(pathSourceRelative, sourceContent, assetJson);
+      const sourceContent = await fs.promises.readFile(
+        pathSourceAbsolute,
+        "utf-8"
+      );
+      const transformedContent = await processMarkdown(
+        pathSourceRelative,
+        sourceContent,
+        assetJson
+      );
       if (transformedContent) {
-        await fs.promises.writeFile(pathTargetAbsolute, String(transformedContent));
+        await fs.promises.writeFile(
+          pathTargetAbsolute,
+          String(transformedContent)
+        );
       }
       if (config.debug) {
-        logger.info(`\u{1F4E4} Converted file from ${pathSourceAbsolute} to ${pathTargetAbsolute}`);
+        logger.info(
+          `\u{1F4E4} Converted file from ${pathSourceAbsolute} to ${pathTargetAbsolute}`
+        );
       }
     }
     results.push(file);
   });
   await Promise.all(promises2);
   targetJson.push(...results);
-  await fs.promises.writeFile(path.join(basePath, "assetInfo.json"), JSON.stringify(assetJson, null, 2));
+  await fs.promises.writeFile(
+    path.join(basePath, "assetInfo.json"),
+    JSON.stringify(assetJson, null, 2)
+  );
 }
 async function removeAssetReferences(filesToDelete, assetJson, websitePath) {
   for (const fileToDelete of filesToDelete) {
@@ -4693,14 +4827,22 @@ async function removeAssetReferences(filesToDelete, assetJson, websitePath) {
         if (docIndex !== -1) {
           size.inDocuments.splice(docIndex, 1);
           if (config.debug) {
-            logger.info(`\u{1F5D1} Removed filePath from inDocuments: ${fileToDelete.pathKey}`);
+            logger.info(
+              `\u{1F5D1} Removed filePath from inDocuments: ${fileToDelete.pathKey}`
+            );
           }
           if (size.inDocuments.length === 0) {
             const assetToRemove = size.newName;
-            await removeAssetFromTarget(assetToRemove, config.docusaurusAssetSubfolderName, websitePath);
+            await removeAssetFromTarget(
+              assetToRemove,
+              config.docusaurusAssetSubfolderName,
+              websitePath
+            );
             asset.sizes.splice(sizeIndex, 1);
             if (config.debug) {
-              logger.info(`\u{1F525} Removed size from sizes: ${size.size}`);
+              logger.info(
+                `\u{1F525} Removed size from sizes: ${size.size}`
+              );
             }
           }
         }
@@ -4708,7 +4850,9 @@ async function removeAssetReferences(filesToDelete, assetJson, websitePath) {
       if (asset.sizes.length === 0) {
         assetJson.splice(assetIndex, 1);
         if (config.debug) {
-          logger.info(`\u{1F4A5} Removed asset from assetJson: ${asset.fileName}`);
+          logger.info(
+            `\u{1F4A5} Removed asset from assetJson: ${asset.fileName}`
+          );
         }
       }
     }
@@ -4717,7 +4861,12 @@ async function removeAssetReferences(filesToDelete, assetJson, websitePath) {
 }
 async function removeAssetFromTarget(assetToRemove, docusaurusAssetSubfolderName, websitePath) {
   for (const asset of assetToRemove) {
-    const assetPath = path.join(websitePath, "static", docusaurusAssetSubfolderName, asset);
+    const assetPath = path.join(
+      websitePath,
+      "static",
+      docusaurusAssetSubfolderName,
+      asset
+    );
     try {
       await fs.promises.unlink(assetPath);
       if (config.debug) {
@@ -4733,45 +4882,69 @@ async function removeAssetFromTarget(assetToRemove, docusaurusAssetSubfolderName
 var copyFile2 = import_util.default.promisify(fs.copyFile);
 var mkdir2 = import_util.default.promisify(fs.mkdir);
 async function copyAssetFilesToTarget(vaultPathPath, websitePath, assetJson, assetsToProcess) {
-  const docusaurusAssetFolderPath = path.join(websitePath, "static", config.docusaurusAssetSubfolderName);
+  const docusaurusAssetFolderPath = path.join(
+    websitePath,
+    "static",
+    config.docusaurusAssetSubfolderName
+  );
   await mkdir2(docusaurusAssetFolderPath, { recursive: true });
   for (const assetToProcess of assetsToProcess) {
     const asset = assetJson[assetToProcess.assetIndex];
     const size = asset.sizes[assetToProcess.sizeIndex];
-    const originalFilePath = path.join(vaultPathPath, config.obsidianAssetSubfolderName, asset.originalFileName).replace(/%20/g, " ");
+    const originalFilePath = path.join(
+      vaultPathPath,
+      config.obsidianAssetSubfolderName,
+      asset.originalFileName
+    ).replace(/%20/g, " ");
     for (const newName of size.newName) {
       const newFilePath = path.join(docusaurusAssetFolderPath, newName);
-      if (["jpg", "png", "webp", "jpeg", "bmp", "gif"].includes(asset.fileExtension)) {
+      if (["jpg", "png", "webp", "jpeg", "bmp", "gif"].includes(
+        asset.fileExtension
+      )) {
         try {
           if (size.size === "standard" && asset.fileExtension === "gif") {
             await fs.copyFileSync(originalFilePath, newFilePath);
             if (config.debug) {
-              logger.info(`Image copied from ${originalFilePath} to ${newFilePath}`);
+              logger.info(
+                `Image copied from ${originalFilePath} to ${newFilePath}`
+              );
             }
           } else {
-            await resizeImage(originalFilePath, newFilePath, size.size);
+            await resizeImage(
+              originalFilePath,
+              newFilePath,
+              size.size
+            );
             if (config.debug) {
-              logger.info(`Image resized and copied from ${originalFilePath} to ${newFilePath}`);
+              logger.info(
+                `Image resized and copied from ${originalFilePath} to ${newFilePath}`
+              );
             }
           }
         } catch (error) {
           if (config.debug) {
-            logger.info(`Failed to resize image and copy from ${originalFilePath} to ${newFilePath}: ${error.message}`);
+            logger.info(
+              `Failed to resize image and copy from ${originalFilePath} to ${newFilePath}: ${error.message}`
+            );
           }
         }
       } else if (asset.fileExtension == "svg") {
         await copySVG(originalFilePath, newFilePath);
-      } else if (["excalidraw"].includes(asset.fileExtension)) {
+      } else if ([asset.fileExtension].includes("excalidraw")) {
         await copyExcalidraw(originalFilePath, newFilePath);
       } else {
         try {
           await copyFile2(originalFilePath, newFilePath);
           if (config.debug) {
-            logger.info(`File copied from ${originalFilePath} to ${newFilePath}`);
+            logger.info(
+              `File copied from ${originalFilePath} to ${newFilePath}`
+            );
           }
         } catch (error) {
           if (config.debug) {
-            logger.error(`Failed to copy file from ${originalFilePath} to ${newFilePath}: ${error.message}`);
+            logger.error(
+              `Failed to copy file from ${originalFilePath} to ${newFilePath}: ${error.message}`
+            );
           }
         }
       }
@@ -4796,7 +4969,10 @@ async function resizeImage(originalFilePath, newFilePath, size) {
   let height;
   let auto = true;
   if (size === "standard") {
-    width = Math.min(widthOriginal, parseInt(config.convertedImageMaxWidth));
+    width = Math.min(
+      widthOriginal,
+      parseInt(config.convertedImageMaxWidth)
+    );
     height = "";
   } else {
     const dimensions = size.split("x");
@@ -4839,7 +5015,14 @@ async function getAssetsToProcess(assetJson, websitePath) {
     }
   }
   const assetsToProcess = documents.filter((document2) => {
-    const fileExists = fs.existsSync(path.join(websitePath, "static", config.docusaurusAssetSubfolderName, document2.path));
+    const fileExists = fs.existsSync(
+      path.join(
+        websitePath,
+        "static",
+        config.docusaurusAssetSubfolderName,
+        document2.path
+      )
+    );
     if (!fileExists && config.debug) {
       logger.info(`File ${document2.path} does not exist.`);
     }

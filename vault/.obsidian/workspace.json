@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f155b7855b68f351",
+        "id": "c2d5a5a6c687efbd",
         "type": "tabs",
         "children": [
           {
-            "id": "9e90a3ed101479db",
+            "id": "5789a7f03c7a7330",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/main/1. Get started/1. Installation/6. Docusaurus Configuration+/docusaurus_config__en.md",
+                "file": "docs/main/CleanCode/Decorator.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/main/1. Get started/1. Installation/6. Docusaurus Configuration+/docusaurus_config__en.md",
+                "file": "docs/main/CleanCode/Decorator.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,9 +110,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/main/1. Get started/1. Installation/6. Docusaurus Configuration+/docusaurus_config__en.md",
+                "file": "docs/main/CleanCode/Decorator.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -133,75 +133,79 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/main/1. Get started/1. Installation/6. Docusaurus Configuration+/docusaurus_config__en.md"
+                "file": "docs/main/CleanCode/Decorator.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidiosaurus:Obsidiosaurus": false,
+      "obsidian-local-images-plus:Local Images Plus  0.15.7\r\nDownload media files": false,
+      "terminal:Open terminal": false,
+      "markdown-importer:Open format converter": false
     }
   },
-  "active": "9e90a3ed101479db",
+  "active": "5789a7f03c7a7330",
   "lastOpenFiles": [
-    "docs/main/1. Get started/1. Installation/5. Website Structure+/website_structure__en.md",
-    "docs/main/1. Get started/1. Installation/6. Docusaurus Configuration+/docusaurus_config__en.md",
-    "docs/sidebar2/1. Multi Language Strcucture/1. Note2+/note2__de.md",
-    "docs/sidebar2/1. Multi Language Strcucture/1. Note2+/note2__en.md",
-    "docs/sidebar2/1. Multi Language Strcucture/0. Note1+/note1__en.md",
-    "docs/sidebar2/1. Multi Language Strcucture/0. Note1+/note1__de.md",
-    "docs/main/0. Introduction+/introduction__de.md",
-    "docs/main/0. Introduction+/introduction__en.md",
-    "docs/main/2. Features+/features__en.md",
-    "docs/main/1. Get started/0. quick_start+/quick_start__en.md",
-    "docs/main/1. Get started/0. quick_start+/quick_start__en 1.md",
-    "docs/main/1. Get started/1. Installation/1. Required Tools+/required_tools__en 1.md",
-    "docs/main/1. Get started/1. Installation/2. Setup Git Repo+/setup_git_repo__en 1.md",
-    "docs/main/1. Get started/1. Installation/3. Docusaurus Installation+/docusaurus_installation__en 1.md",
-    "docs/main/1. Get started/1. Installation/4. Vault Setup+/vault_setup__en 1.md",
-    "docs/main/1. Get started/1. Installation/5. Website Structure+/website_structure__en 1.md",
-    "docs/main/1. Get started/1. Installation/4. Vault Setup+/vault_setup__en.md",
-    "docs/main/1. Get started/1. Installation/3. Docusaurus Installation+/docusaurus_installation__en.md",
-    "docs/main/1. Get started/1. Installation/2. Setup Git Repo+/setup_git_repo__en.md",
-    "docs/main/1. Get started/1. Installation/1. Required Tools+/required_tools__en.md",
-    "release_notes__blog/2023-07-01_0.3+/0.3.0.md",
-    "release_notes__blog/release.md",
-    "docs/sidebar2/0. Single Language Structure/1. note2.md",
-    "docs/sidebar2/0. Single Language Structure/0. note1.md",
-    "docs/main/2. Features/Search+/search__en.md",
-    "docs/main/2. Features/blog+/blog__en.md",
-    "assets/vs-code_new_terminal.png",
-    "assets/netlify_logo.svg",
-    "assets/vercel_logo.png",
-    "assets/logo-netlify-small-fullcolor-lightmode.svg",
-    "assets/Pasted image 20230730122013.png",
-    "assets/github_pages_repository_settings.png",
-    "docs/main/1. Get started/3. Deployment/2. Netlify+",
-    "docs/main/1. Get started/3. Deployment/3. Vercel+",
-    "docs/main/1. Get started/3. Deployment/1. Github Pages+",
-    "assets/obsidian_console.png",
-    "assets/obsidiosaurus_run_sucess_notifaction_2.png",
-    "assets/obsidiosaurus_plugin_settings.png",
-    "assets/obsidiosaurus_sidebar_icon.png",
-    "docs/main/1. Get started/1. Installation/7. Create notes+",
-    "docs/main/1. Get started/1. Installation/6. Docusaurus Configuration+",
-    "docs/main/1. Get started/1. Installation/5. Website Structure+",
-    "docs/main/1. Get started/1. Installation+/4. Vault Setup+/Untitled",
-    "docs/main/2. Features/1. Overview+/Untitled",
-    "docs/main/2. Features/1. Overview+",
-    "docs/main/2. Features/2. Roadmap+"
+    "docs/main/CleanCode/Adapter.md",
+    "docs/main/CleanCode/Decorator.md",
+    "assets/cleancode1.png",
+    "assets/cleancode95.png",
+    "assets/cleancode39.png",
+    "assets/cleancode38.png",
+    "assets/cleancode37.png",
+    "assets/cleancode36.png",
+    "assets/cleancode35.png",
+    "assets/cleancode34.png",
+    "assets/cleancode33.png",
+    "assets/cleancode32.png",
+    "docs/main/CleanCode/Abstract Factory.md",
+    "docs/main/CleanCode/Builder.md",
+    "docs/main/0. Introduction.md",
+    "assets/73b51cfa8075f198cf3a64015f5e747e_MD5.webp.md",
+    "docs/main/CleanCode/Singleton.md",
+    "docs/main/CleanCode/Automated Unit Tests.md",
+    "docs/main/UI & UX/Interaktive Systeme/Unterstützung beim Aufbau mentaler Modelle.md",
+    "docs/main/CleanCode/You Aint Gonna Need It.md",
+    "docs/main/CleanCode/Weißer Grad.md",
+    "docs/main/CleanCode/Visitor.md",
+    "docs/main/CleanCode/Version Control System.md",
+    "docs/main/CleanCode/Unit Test.md",
+    "docs/main/CleanCode/Test First.md",
+    "docs/main/CleanCode/Template Method.md",
+    "docs/main/CleanCode/Tell, dont ask.md",
+    "docs/main/CleanCode/Strategy.md",
+    "docs/main/CleanCode/Statical Code Analysis.md",
+    "docs/main/CleanCode/State.md",
+    "docs/main/CleanCode/Source Code Conventions.md",
+    "docs/main/CleanCode/Single Responsibility Principle.md",
+    "docs/main/CleanCode/Single Level of Abstraction.md",
+    "docs/main/CleanCode/Simple Refactorings.md",
+    "docs/main/CleanCode/Share Experience.md",
+    "docs/main/CleanCode/Separation of Concerns.md",
+    "docs/main/CleanCode",
+    "docs/main/CleanCode",
+    "docs/main/CleanCode",
+    "docs/main/UI & UX/Interaktive Systeme",
+    "docs/main/UI & UX",
+    "docs/main/0. Introduction",
+    "docs/main",
+    "docs/SoftwareEngineering/0. Introduction",
+    "Untitled",
+    "docs/UI & UX/Interaktive Systeme"
   ]
 }

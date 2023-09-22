@@ -1,43 +1,194 @@
+/* latin-ext */
 @font-face {
-  font-family: 'Lexxend'; /* Provide a name for the font */
-  src: url('Lexend.ttf') format('truetype'); 
+  font-family: 'Red Hat Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/jVyY7nDnA2uf2zVvFAhhzEs-VMSjJpBTfgjwQW_Iy7jHuF4Q.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Red Hat Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/jVyY7nDnA2uf2zVvFAhhzEs-VMSjJpBTfgjwQW_Iy7bHuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/-nFnOHM81r4j6k0gjAW3mujVU2B2G_5x0ujy.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/-nFnOHM81r4j6k0gjAW3mujVU2B2G_Bx0g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/R70mjywflP6FLr3gZx7K8UyuXDs9zVwDmXCb8lxYgmuimXPEWoRldX48gvjL4_HUPM_kB_qXSET5Jyh0xOI.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/R70mjywflP6FLr3gZx7K8UyuXDs9zVwDmXCb8lxYgmuimXPEWoRldX48gvjL4_HUPM_kB_qXSET5KSh0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Lexxend';
+  src: url('Lexend.ttf') format('truetype');
 }
 
 :root {
-  --ifm-color-primary: #6d54bc;
-  --ifm-color-primary-dark: #5f45b0;
-  --ifm-color-primary-darker: #5941a6;
-  --ifm-color-primary-darkest: #4a3689;
-  --ifm-color-primary-light: #7e68c4;
-  --ifm-color-primary-lighter: #8671c7;
-  --ifm-color-primary-lightest: #9f8fd3;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-heading-color: #6d54bc;
-  --ifm-background-color: #FFFFFF !important;
-  --ifm-background-surface-color: #F0F0F0 !important;
-  --ifm-menu-color-background-active: rgba(109, 84, 188, 0.15);
-  --ifm-menu-color-active: #6d54bc;
-  --text-color: #1c1e26;
+  --momolem-bg-color: rgba(255,255,255, 1);
+  --momolem-text-color: rgba(35,49,66, 1);
+  --momolem-text-soft-color: rgba(66,75,87, 1);
+  --momolem-text-strong-color: rgba(74,74,74, 1);
+  --momolem-subtle-color: rgba(247,249,254, 1);
+  --momolem-border-color: rgba(219,232,251, 1);
+  --momolem-shadow-color: rgba(166,193,230, 1);
+  --momolem-input-color: rgba(255,255,255, 1);
+  --momolem-outline-color: rgba(154,197,250, 1);
+  --momolem-mark-color: rgba(0,138,215, 0.08);
+  --momolem-special-color: rgba(0,138,215, 1);
+  --momolem-special-bg-color: rgba(0,142,221, 1);
+  --momolem-special-text-color: rgba(255,255,255, 1);
+  --momolem-special-shadow-color: rgba(69,96,127, 1);
+  --momolem-special-mark-color: rgba(255,255,255, 0.08);
+  --momolem-light-color: rgba(237,244,255, 1);
+  --momolem-dark-color: rgba(51,72,97, 1);
+  --momolem-text-color-rgb: 35,49,66;
+  --momolem-bg-color-rgb: 255,255,255;
+  --momolem-subtle-color-rgb: 247,249,254;
+  --momolem-special-color-rgb: 0,138,215;
+  --momolem-special-text-color-rgb: 255,255,255;
+  --momolem-special-bg-color-rgb: 0,142,221;
+  --momolem-shadow-color-rgb: 166,193,230;
+  --momolem-special-shadow-color-rgb: 69,96,127;
+  --momolem-outline-color-rgb: 154,197,250;
+  --momolem-dark-color-rgb: 51,72,97;
+  --momolem-light-color-rgb: 237,244,255;
 
-  --ifm-font-family-base: "Lexxend", sans-serif;
-  --ifm-font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --font-body: "Roboto Serif";
+  --font-header: "DM Serif Display";
+  --font-mono: "Red Hat Mono"
+
+  --ifm-color-primary: var(--momolem-special-color);
+  --ifm-color-primary: #008ad7;
+  --ifm-color-primary-dark: #007cc2;
+  --ifm-color-primary-darker: #0075b7;
+  --ifm-color-primary-darkest: #006197;
+  --ifm-color-primary-light: #0098ed;
+  --ifm-color-primary-lighter: #009ff7;
+  --ifm-color-primary-lightest: #16acff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-heading-color: var(--momolem-special-bg-color);
+  --ifm-background-color: var(--momolem-bg-color) !important;
+  --ifm-background-surface-color: var(--momolem-subtle-color) !important;
+  --ifm-menu-color-background-active: var(--momolem-light-color);
+  --ifm-menu-color-active: var(--momolem-special-color);
+  --text-color: var(--momolem-text-color);
+
+
+    /* Search Bar*/
+    --aa-icon-color-rgb: var(--momolem-special-color-rgb) !important;
+    --aa-text-color-rgb: var(--momolem-text-color-rgb) !important;
+    --aa-primary-color-rgb: var(--momolem-special-color-rgb) !important;
+    --aa-muted-color-rgb: var(--momolem-mark-color) !important;
+    --aa-panel-border-color-rgb: var(--momolem-border-color-rgb) !important;
+    --aa-input-border-color-rgb: var(--momolem-border-color-rgb) !important;
+    --aa-background-color-rgb: var(--momolem-bg-color-rgb) !important;
+    --aa-input-background-color-rgb: var(--momolem-bg-color-rgb) !important;
+    --aa-selected-color-rgb: var(--momolem-special-bg-color-rgb) !important;
+    --aa-description-highlight-background-color-rgb: var(--momolem-bg-color-rgb) !important;
+    --ifm-font-family-base: "Lexxend", sans-serif;
+    --ifm-font-family-monospace: "Red Hat Mono";
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #8b6cef;
-  --ifm-color-primary-dark: #724dec;
-  --ifm-color-primary-darker: #663dea;
-  --ifm-color-primary-darkest: #4618db;
-  --ifm-color-primary-light: #a48bf2;
-  --ifm-color-primary-lighter: #b09bf4;
-  --ifm-color-primary-lightest: #d5caf9;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.2);
-  --ifm-heading-color: #8b6cef;
-  --ifm-background-color: #21222c !important;
-  --ifm-background-surface-color: #1c1e26 !important;
-  --ifm-menu-color-background-active: rgba(109, 84, 188, 0.15);
-  --ifm-menu-color-active: #8b6cef;
-  --text-color: #FFFFFF;
+  --momolem-bg-color: rgba(32,32,32, 1);
+  --momolem-text-color: rgba(219,223,230, 1);
+  --momolem-text-soft-color: rgba(183,188,196, 1);
+  --momolem-text-strong-color: rgba(187,187,187, 1);
+  --momolem-subtle-color: rgba(32,37,43, 1);
+  --momolem-border-color: rgba(36,49,66, 1);
+  --momolem-shadow-color: rgba(0,0,0, 1);
+  --momolem-input-color: rgba(28,28,28, 1);
+  --momolem-outline-color: rgba(82,164,237, 1);
+  --momolem-mark-color: rgba(49,144,217, 0.08);
+  --momolem-special-color: rgba(49,144,217, 1);
+  --momolem-special-bg-color: rgba(32,103,156, 1);
+  --momolem-special-text-color: rgba(219,223,230, 1);
+  --momolem-special-shadow-color: rgba(20,31,44, 1);
+  --momolem-special-mark-color: rgba(219,223,230, 0.08);
+  --momolem-light-color: rgba(187,214,251, 1);
+  --momolem-dark-color: rgba(37,54,73, 1);
+  --momolem-text-color-rgb: 219,223,230;
+  --momolem-bg-color-rgb: 32,32,32;
+  --momolem-subtle-color-rgb: 32,37,43;
+  --momolem-border-color-rgb: 36,49,66;
+  --momolem-special-color-rgb: 49,144,217;
+  --momolem-special-text-color-rgb: 219,223,230;
+  --momolem-special-bg-color-rgb: 32,103,156;
+  --momolem-shadow-color-rgb: 0,0,0;
+  --momolem-special-shadow-color-rgb: 20,31,44;
+  --momolem-outline-color-rgb: 82,164,237;
+  --momolem-dark-color-rgb: 37,54,73;
+  --momolem-light-color-rgb: 187,214,251;
+
+  --ifm-color-primary: #3190d9;
+  --ifm-color-primary-dark: #2582ca;
+  --ifm-color-primary-darker: #237bbf;
+  --ifm-color-primary-darkest: #1d659d;
+  --ifm-color-primary-light: #479cdd;
+  --ifm-color-primary-lighter: #53a2df;
+  --ifm-color-primary-lightest: #74b4e5;
+  --ifm-heading-color: var(--momolem-special-bg-color);
+  --ifm-background-color: var(--momolem-bg-color) !important;
+  --ifm-background-surface-color: var(--momolem-subtle-color) !important;
+  --ifm-menu-color-background-active: var(--momolem-dark-color);
+  --ifm-menu-color-active: var(--momolem-special-color);
+  --text-color: var(--momolem-text-color);
+
+  --font-body: "Roboto Serif";
+  --font-header: "DM Serif Display";
+  --font-mono: "Red Hat Mono"
+
+   /* Search Bar*/
+   --aa-icon-color-rgb: var(--momolem-special-color-rgb) !important;
+   --aa-text-color-rgb: var(--momolem-text-color-rgb) !important;
+   --aa-primary-color-rgb: var(--momolem-special-color-rgb) !important;
+   --aa-muted-color-rgb: var(--momolem-mark-color) !important;
+   --aa-panel-border-color-rgb: var(--momolem-border-color-rgb) !important;
+   --aa-input-border-color-rgb: var(--momolem-border-color-rgb) !important;
+   --aa-background-color-rgb: var(--momolem-bg-color-rgb) !important;
+   --aa-input-background-color-rgb: var(--momolem-bg-color-rgb) !important;
+   --aa-selected-color-rgb: var(--momolem-special-bg-color-rgb) !important;
+   --aa-description-highlight-background-color-rgb: var(--momolem-bg-color-rgb) !important;
 }
 
 [data-theme='light'] {
@@ -45,16 +196,14 @@
 }
 
 .footer--dark {
-  --ifm-footer-title-color: #21222c;
-  --ifm-footer-background-color: #F0F0F0;
-  --ifm-footer-link-color: #21222c;
+  --ifm-footer-background-color: var(--momolem-subtle-color);
   color: var(--ifm-color-primary)
 
 }
 
 [data-theme='dark'] .footer--dark {
-  --ifm-footer-background-color: #1c1e26;
-  font-weight: 600;
+  --ifm-footer-background-color: var(--momolem-subtle-color);
+  color: var(--ifm-color-primary)
 
 }
 
@@ -69,6 +218,7 @@
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-color);
+  font-family: var(--font-header);
 }
 
 .header-github-link:hover {

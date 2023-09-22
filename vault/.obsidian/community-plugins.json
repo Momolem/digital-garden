@@ -3,5 +3,11 @@
   "obsidian-excalidraw-plugin",
   "url-into-selection",
   "hot-reload",
-  "obsidiosaurus"
+  "obsidiosaurus",
+  "obsidian-local-images-plus",
+  "tag-wrangler",
+  "terminal",
+  "obsidian-linter",
+  "obsidian-bulk-rename-plugin",
+  "obsidian-link-converter"
 ]

@@ -1,0 +1,13 @@
+{
+  "folderName": "assets",
+  "fileNames": [],
+  "existingSymbol": ".*",
+  "replacePattern": "",
+  "regExpState": {
+    "regExp": "assets/[0-9]+",
+    "flags": [],
+    "withRegExpForReplaceSymbols": true
+  },
+  "tags": [],
+  "viewType": "regexp"
+}
