@@ -12,11 +12,11 @@ const config = {
   favicon: 'img/favicon.ico',
 
 
-  url: 'https://vogel.business',
-  baseUrl: '/obsidiosaurus-docs/',
+  url: 'https://knowledge.vogel.business',
+  baseUrl: '/',
 
   organizationName: 'momolem', 
-  projectName: 'digitalGarden', 
+  projectName: 'digital-garden', 
   trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
