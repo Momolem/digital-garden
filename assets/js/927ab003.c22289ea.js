@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[5980],{770:e=>{e.exports=JSON.parse('{"label":"cleancode/designpatterns","permalink":"/docs/tags/cleancode-designpatterns","allTagsPath":"/docs/tags","count":1,"items":[{"id":"main/CleanCode/Factory","title":"Factory","description":"Intent","permalink":"/docs/main/CleanCode/Factory"}]}')}}]);
