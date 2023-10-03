@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[4121],{8070:e=>{e.exports=JSON.parse('[{"label":"cleancode/designpatterns","permalink":"/docs/tags/cleancode-designpatterns","count":1},{"label":"is","permalink":"/docs/tags/is","count":15}]')}}]);
