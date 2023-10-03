@@ -15,7 +15,7 @@ linter-yaml-title-alias: Reduktion der kognitiven Belastung
 	- insb. bei der Nutzung durch Experten
 
 ## Methoden
-- [Chunking](Interaktive%20Systeme/Chunking.md)
+- [Chunking](docs/main/UI%20&%20UX/Interaktive%20Systeme/Chunking.md)
 - Wichtige Informationen, Systemzustände, Modi persistent anzeigen (vgl. Systemzustand)
 - Weniger wichtige Informationen ausblenden
 - Komplexe Aktionen in einzelne Schritte zerlegen (Teilziele)

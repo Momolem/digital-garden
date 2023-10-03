@@ -1,0 +1,24 @@
+{
+  "trigger_auto_manual": "Automatic",
+  "use_regex_to_check_for_tags": false,
+  "statusBar_trigger_indicator": true,
+  "folder_tag_pattern": [
+    {
+      "folder": "docs/main/CleanCode/0. DesignPatterns",
+      "tag": "#cleancode/designpatterns",
+      "pattern": ""
+    },
+    {
+      "folder": "docs/main/CleanCode/1. CleanCodeDeveloper/Prinzipien",
+      "tag": "#cleancode/ccd/principle",
+      "pattern": ""
+    },
+    {
+      "folder": "docs/main/CleanCode/1. CleanCodeDeveloper/Praktiken",
+      "tag": "#cleancode/ccd/practic",
+      "pattern": ""
+    }
+  ],
+  "use_regex_to_check_for_excluded_folder": false,
+  "excluded_folder": []
+}

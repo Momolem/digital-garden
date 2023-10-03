@@ -9,5 +9,6 @@
   "terminal",
   "obsidian-linter",
   "obsidian-bulk-rename-plugin",
-  "obsidian-link-converter"
+  "obsidian-link-converter",
+  "auto-note-mover"
 ]
