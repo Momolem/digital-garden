@@ -46,7 +46,7 @@ Extending a class is the first thing that comes to mind when you need to alter a
 
 One of the ways to overcome these caveats is by using _Aggregation_ or _Composition_  instead of _Inheritance_. Both of the alternatives work almost the same way: one object _has a_ reference to another and delegates it some work, whereas with inheritance, the object itself _is_ able to do that work, inheriting the behavior from its superclass.
 
-With this new approach you can easily substitute the linked “helper” object with another, changing the behavior of the container at runtime. An object can use the behavior of various classes, having references to multiple objects and delegating them all kinds of work. Aggregation/composition is the key principle behind many [design patterns](/docs/main/CleanCode/DesignPatterns/index), including Decorator. On that note, let’s return to the pattern discussion.
+With this new approach you can easily substitute the linked “helper” object with another, changing the behavior of the container at runtime. An object can use the behavior of various classes, having references to multiple objects and delegating them all kinds of work. Aggregation/composition is the key principle behind many [design patterns](/docs/main/CleanCode/DesignPatterns/DesignPatterns), including Decorator. On that note, let’s return to the pattern discussion.
 
 ![cleancode127](//assets/cleancode127.webp)
 

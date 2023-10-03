@@ -6,7 +6,7 @@ tags:
 ---
 # Singleton
 ## Intent
-**Singleton** is a [](docs/main/CleanCode/0.%20DesignPatterns/index.md#Creational|creational%20design%20pattern) that lets you ensure that a class has **only one instance**, while providing a global access point to this instance.
+**Singleton** is a [](docs/main/CleanCode/0.%20DesignPatterns/0.%20DesignPatterns.md#Creational|creational%20design%20pattern) that lets you ensure that a class has **only one instance**, while providing a global access point to this instance.
 
 ## Problem
 The Singleton pattern solves two problems at the same time, violating the _[Single Responsibility Principle](/docs/main/CleanCode/CleanCodeDeveloper/Prinzipien/Single%20Responsibility%20Principle)_:

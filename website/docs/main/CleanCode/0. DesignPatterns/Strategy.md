@@ -9,7 +9,7 @@ tags:
 
 ## Intent
 
-**Strategy** is a [](docs/main/CleanCode/0.%20DesignPatterns/index.md#Behavioral|behavioral%20design%20pattern) that lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
+**Strategy** is a [](docs/main/CleanCode/0.%20DesignPatterns/0.%20DesignPatterns.md#Behavioral|behavioral%20design%20pattern) that lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
 
 ## Problem
 
