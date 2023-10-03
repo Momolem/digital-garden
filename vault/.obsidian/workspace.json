@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/index.md",
+                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/1. CleanCodeDeveloper.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#cleancode",
+                "query": "```",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/index.md",
+                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/1. CleanCodeDeveloper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/index.md",
+                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/1. CleanCodeDeveloper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/index.md"
+                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/1. CleanCodeDeveloper.md"
               }
             }
           },
@@ -170,9 +170,18 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "2d0351253a0d7320",
+  "active": "8704731f83275ef1",
   "lastOpenFiles": [
-    "docs/main/CleanCode/index.md",
+    "docs/main/CleanCode/1. CleanCodeDeveloper/Legacy Code.md",
+    "docs/main/CleanCode/1. CleanCodeDeveloper/1. CleanCodeDeveloper.md",
+    "docs/main/CleanCode/0. DesignPatterns/0. DesignPatterns.md",
+    "docs/main/CleanCode/CleanCode.md",
+    "docs/main/CleanCode/0. DesignPatterns/_category_.json",
+    "docs/main/CleanCode/_category_.json",
+    "docs/main/UI & UX/Interaktive Systeme/Entwurfsprinzipien/Entwurfsprinzipien MOC.md",
+    "docs/main/UI & UX/Interaktive Systeme/Entwurfsprinzipien/Abbruch und Rückgängigmachen von Aktionen.md",
+    "docs/main/UI & UX/Interaktive Systeme/Entwurfsprinzipien",
+    "docs/main/0. Introduction.md",
     "docs/main/CleanCode/0. DesignPatterns/Visitor.md",
     "docs/main/CleanCode/0. DesignPatterns/Template Method.md",
     "docs/main/CleanCode/0. DesignPatterns/Strategy.md",
@@ -184,7 +193,6 @@
     "docs/main/CleanCode/0. DesignPatterns/Memento.md",
     "docs/main/CleanCode/0. DesignPatterns/Mediator.md",
     "docs/main/CleanCode/0. DesignPatterns/Iterator.md",
-    "docs/main/CleanCode/0. DesignPatterns/index.md",
     "docs/main/CleanCode/0. DesignPatterns/Flyweight.md",
     "docs/main/CleanCode/0. DesignPatterns/Factory.md",
     "docs/main/CleanCode/0. DesignPatterns/Facade.md",
@@ -193,11 +201,6 @@
     "docs/main/CleanCode/0. DesignPatterns/Command.md",
     "docs/main/CleanCode/0. DesignPatterns/Chain of Responsibility.md",
     "docs/main/CleanCode/0. DesignPatterns/Builder.md",
-    "docs/main/CleanCode/0. DesignPatterns/Bridge.md",
-    "docs/main/CleanCode/0. DesignPatterns/Adapter.md",
-    "docs/main/CleanCode/0. DesignPatterns/Abstract Factory.md",
-    "docs/main/CleanCode/1. CleanCodeDeveloper/Refaktorisieren.md",
-    "docs/main/CleanCode/1. CleanCodeDeveloper/Robert C. Martin.md",
     "docs/main/CleanCode/1. CleanCodeDeveloper/Praktiken",
     "docs/main/CleanCode/1. CleanCodeDeveloper/Prinzipien",
     "docs/main/CleanCode/1. CleanCodeDeveloper/Grade",
@@ -214,9 +217,6 @@
     "assets/cleancode34.png",
     "assets/cleancode33.png",
     "docs/main/CleanCode",
-    "docs/main/CleanCode",
-    "docs/main/CleanCode",
-    "docs/main/UI & UX/Interaktive Systeme",
-    "docs/main/UI & UX"
+    "docs/main/CleanCode"
   ]
 }

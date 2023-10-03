@@ -9,7 +9,7 @@ tags:
 # Chain of Responsibility
 
 ## Intent
-**Chain of Responsibility** is a [](docs/main/CleanCode/0.%20DesignPatterns/index.md#Behavioral|behavioral%20design%20pattern) that lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
+**Chain of Responsibility** is a [](docs/main/CleanCode/0.%20DesignPatterns/0.%20DesignPatterns.md#Behavioral|behavioral%20design%20pattern) that lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
 
 ## Problem
 Imagine that you’re working on an online ordering system. You want to restrict access to the system so only authenticated users can create orders. Also, users who have administrative permissions must have full access to all orders.

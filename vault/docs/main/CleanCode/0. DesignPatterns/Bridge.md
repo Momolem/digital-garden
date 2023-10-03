@@ -7,7 +7,7 @@ tags:
 # Bridge
 
 ## Intent
-**Bridge** is a [](docs/main/CleanCode/0.%20DesignPatterns/index.md#Structural|structural%20design%20pattern) that lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.
+**Bridge** is a [](docs/main/CleanCode/0.%20DesignPatterns/0.%20DesignPatterns.md#Structural|structural%20design%20pattern) that lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.
 
 ## Problem
 _Abstraction?_ _Implementation?_ Sound scary? Stay calm and let’s consider a simple example.

@@ -10,7 +10,7 @@ tags:
 # Continuous Delivery
 
 >**Warum?**
->Als [index](docs/main/CleanCode/1.%20CleanCodeDeveloper/index.md) möchte ich sicher sein, dass ein Setup das Produkt korrekt installiert. Wenn ich das erst beim Kunden herausfinde, ist es zu spät.
+>Als [1. CleanCodeDeveloper](docs/main/CleanCode/1.%20CleanCodeDeveloper/1.%20CleanCodeDeveloper.md) möchte ich sicher sein, dass ein Setup das Produkt korrekt installiert. Wenn ich das erst beim Kunden herausfinde, ist es zu spät.
 
 Im [grünen Grad](docs/main/CleanCode/1.%20CleanCodeDeveloper/Grade/3.%20Grüner%20Grad.md) haben wir den [Continuous Integration](docs/main/CleanCode/1.%20CleanCodeDeveloper/Praktiken/Continuous%20Integration.md) Prozess für Build und Test aufgesetzt. Damit sorgt der [Continuous Integration](docs/main/CleanCode/1.%20CleanCodeDeveloper/Praktiken/Continuous%20Integration.md) Prozess dafür, dass Fehler während der Build- und Testphase schnell entdeckt werden. Wenn z.B. eine Änderung am Code dazu führt, dass eine andere Komponente nicht mehr übersetzt werden kann, weist der [Continuous Integration](docs/main/CleanCode/1.%20CleanCodeDeveloper/Praktiken/Continuous%20Integration.md) Prozess kurze Zeit nach dem Commit der Änderung auf den Fehler hin. Wenn am Ende jedoch ein Setup Programm produziert wird, welches sich aufgrund von Fehlern nicht installieren lässt, haben wir unser Ziel trotzdem nicht erreicht: funktionierende Software die bei unseren Kunden installiert werden kann.
 
