@@ -12,7 +12,7 @@ tags:
 >**Warum?**
 Dinge die niemand braucht, haben keinen Wert. Verschwende an sie also keine Zeit.
 
-Das YAGNI-Prinzip (_You Ain´t Gonna Need It_) ist eines der einfachsten in der Softwareentwicklung – und doch wohl das nach dem [DRY](/docs/main/CleanCode/CleanCodeDeveloper/Prinzipien/DRY)-Prinzip am häufigsten verletzte Prinzip. Deshalb steht YAGNI nicht nur am Anfang des [roten Grades](docs/main/CleanCode/1.%20CleanCodeDeveloper/Grade/0.%20Roter%20Grad.md), sondern auch hier gegen Ende des Weges durch das [](docs/main/CleanCode/1.%20CleanCodeDeveloper/1.%20CleanCodeDeveloper.md#Wertesystem|Wertesystem).
+Das YAGNI-Prinzip (_You Ain´t Gonna Need It_) ist eines der einfachsten in der Softwareentwicklung – und doch wohl das nach dem [DRY](/docs/main/CleanCode/CleanCodeDeveloper/Prinzipien/DRY)-Prinzip am häufigsten verletzte Prinzip. Deshalb steht YAGNI nicht nur am Anfang des [roten Grades](docs/main/CleanCode/1.%20CleanCodeDeveloper/Grade/0.%20Roter%20Grad.md), sondern auch hier gegen Ende des Weges durch das [](docs/main/CleanCode/1.%20CleanCodeDeveloper/CleanCodeDeveloper.md#Wertesystem|Wertesystem).
 
 Geschuldet ist das YAGNI-Prinzip dem in der Softwareentwicklung besonderen Verhältnis von Anforderungsgenauigkeit und Produktmaterialität. Anforderungen sind notorisch ungenau oder wechselnd und das Produkt, in dem sie umgesetzt werden sollen, immateriell. Im Vergleich zum Maschinen- oder Gebäudebau ist das Material also unendlich flexibel und kann sich prinzipiell mit vergleichsweise wenig Aufwand an quasi jede Anforderung anpassen lassen. Hohe Volatiliät bzw. Ungenauigkeit trifft also auf hohe Flexibilität. Das scheint zunächst einmal ideal.
 

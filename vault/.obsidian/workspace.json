@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/1. CleanCodeDeveloper.md",
+                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/CleanCodeDeveloper.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/1. CleanCodeDeveloper.md",
+                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/CleanCodeDeveloper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/1. CleanCodeDeveloper.md",
+                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/CleanCodeDeveloper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/1. CleanCodeDeveloper.md"
+                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/CleanCodeDeveloper.md"
               }
             }
           },
@@ -173,7 +173,7 @@
   "active": "8704731f83275ef1",
   "lastOpenFiles": [
     "docs/main/CleanCode/1. CleanCodeDeveloper/Legacy Code.md",
-    "docs/main/CleanCode/1. CleanCodeDeveloper/1. CleanCodeDeveloper.md",
+    "docs/main/CleanCode/1. CleanCodeDeveloper/CleanCodeDeveloper.md",
     "docs/main/CleanCode/0. DesignPatterns/0. DesignPatterns.md",
     "docs/main/CleanCode/CleanCode.md",
     "docs/main/CleanCode/0. DesignPatterns/_category_.json",

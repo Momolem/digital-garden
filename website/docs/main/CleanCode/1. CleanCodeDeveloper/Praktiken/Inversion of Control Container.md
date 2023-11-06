@@ -12,7 +12,7 @@ tags:
 >**Warum?**
 >Nur, was nicht fest verdrahtet ist, kann leichter umkonfiguriert werden.
 
-Bereits im [gelben Grad](/docs/main/CleanCode/CleanCodeDeveloper/Grade/Gelber%20Grad) hat der [CCD](docs/main/CleanCode/1.%20CleanCodeDeveloper/1.%20CleanCodeDeveloper.md) das [Dependency Inversion Principle](docs/main/CleanCode/1.%20CleanCodeDeveloper/Prinzipien/Dependency%20Inversion%20Principle.md) kennengelernt. Dabei wurden die Abhängigkeiten noch „von Hand“ aufgelöst. Der nächste logische Schritt besteht nun darin, das Auflösen der Abhängigkeiten zu automatisieren. Dazu stehen zwei Verfahren zur Verfügung:
+Bereits im [gelben Grad](/docs/main/CleanCode/CleanCodeDeveloper/Grade/Gelber%20Grad) hat der [CCD](docs/main/CleanCode/1.%20CleanCodeDeveloper/CleanCodeDeveloper.md) das [Dependency Inversion Principle](docs/main/CleanCode/1.%20CleanCodeDeveloper/Prinzipien/Dependency%20Inversion%20Principle.md) kennengelernt. Dabei wurden die Abhängigkeiten noch „von Hand“ aufgelöst. Der nächste logische Schritt besteht nun darin, das Auflösen der Abhängigkeiten zu automatisieren. Dazu stehen zwei Verfahren zur Verfügung:
 
 -   Locator
 -   Container
