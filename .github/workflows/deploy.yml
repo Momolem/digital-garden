@@ -23,7 +23,10 @@ jobs:
         run: |
           cd website
           npm run build
-
+      - name: Copy CNAME to Build Folder
+        run: |
+          cd website
+          cp CNAME build/CNAME
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
       - name: Deploy to GitHub Pages
