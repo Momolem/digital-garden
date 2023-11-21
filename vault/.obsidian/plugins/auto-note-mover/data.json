@@ -4,17 +4,17 @@
   "statusBar_trigger_indicator": true,
   "folder_tag_pattern": [
     {
-      "folder": "docs/main/CleanCode/0. DesignPatterns",
+      "folder": "docs/main/CleanCode/DesignPatterns",
       "tag": "#cleancode/designpatterns",
       "pattern": ""
     },
     {
-      "folder": "docs/main/CleanCode/1. CleanCodeDeveloper/Prinzipien",
+      "folder": "docs/main/CleanCode/CleanCodeDeveloper/Prinzipien",
       "tag": "#cleancode/ccd/principle",
       "pattern": ""
     },
     {
-      "folder": "docs/main/CleanCode/1. CleanCodeDeveloper/Praktiken",
+      "folder": "docs/main/CleanCode/CleanCodeDeveloper/Praktiken",
       "tag": "#cleancode/ccd/practic",
       "pattern": ""
     }

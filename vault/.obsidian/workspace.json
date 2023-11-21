@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "ae3419e5a364d578",
+        "id": "4b9edaff7b9fec72",
         "type": "tabs",
         "children": [
           {
-            "id": "2d0351253a0d7320",
+            "id": "96389c987bb1dda6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/CleanCodeDeveloper.md",
+                "file": "docs/main/CleanCode/CleanCode.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d40c271579b65a5b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/main/CleanCode/CleanCodeDeveloper/Praktiken/Daily Reflection.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9a2febc6b3ce7c66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/main/CleanCode/CleanCode.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -49,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "```",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,14 +119,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/CleanCodeDeveloper.md",
+                "file": "docs/main/CleanCode/CleanCodeDeveloper/Praktiken/Daily Reflection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -111,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/CleanCodeDeveloper.md",
+                "file": "docs/main/CleanCode/CleanCodeDeveloper/Praktiken/Daily Reflection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/main/CleanCode/1. CleanCodeDeveloper/CleanCodeDeveloper.md"
+                "file": "docs/main/CleanCode/CleanCodeDeveloper/Praktiken/Daily Reflection.md"
               }
             }
           },
@@ -148,8 +173,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -163,50 +187,52 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidiosaurus:Obsidiosaurus": false,
-      "obsidian-local-images-plus:Local Images Plus  0.15.7\r\nDownload media files": false,
-      "terminal:Open terminal": false,
-      "markdown-importer:Open format converter": false
+      "markdown-importer:Open format converter": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-local-images-plus:Local Images Plus  0.15.9\r\nLocalize attachments (plugin folder)": false,
+      "terminal:Open terminal": false
     }
   },
-  "active": "8704731f83275ef1",
+  "active": "d40c271579b65a5b",
   "lastOpenFiles": [
-    "docs/main/CleanCode/1. CleanCodeDeveloper/Legacy Code.md",
-    "docs/main/CleanCode/1. CleanCodeDeveloper/CleanCodeDeveloper.md",
-    "docs/main/CleanCode/0. DesignPatterns/0. DesignPatterns.md",
     "docs/main/CleanCode/CleanCode.md",
-    "docs/main/CleanCode/0. DesignPatterns/_category_.json",
+    "docs/main/CleanCode/CleanCodeDeveloper/Grade/Roter Grad.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Prinzipien/Integration Operation Segregation Principle.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Praktiken/Daily Reflection.md",
+    "docs/main/CleanCode/CleanCodeDeveloper.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Prinzipien/Open Closed Principle.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Praktiken/Automated Integrationtests.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Unit Test.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Praktiken/Automated Unit Tests.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Integration Tests.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/CleanCodeDeveloper.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Grade/Weißer Grad.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Grade/Blauer Grad.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Grade/Grüner Grad.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Grade/Gelber Grad.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Grade/Orangener Grad.md",
+    "docs/cooking/Persisch/Das mit den Bohnen.md",
     "docs/main/CleanCode/_category_.json",
+    "docs/main/CleanCode/New File",
+    "docs/main/CleanCode/CleanCodeDeveloper/Untitled.md",
+    "docs/main/CleanCode/DesignPatterns/DesignPatterns.md",
+    "docs/cooking/Persisch",
+    "docs/cooking",
+    "docs/main/CleanCode/CleanCodeDeveloper/Legacy Code.md",
+    "docs/main/CleanCode/0. DesignPatterns/_category_.json",
     "docs/main/UI & UX/Interaktive Systeme/Entwurfsprinzipien/Entwurfsprinzipien MOC.md",
     "docs/main/UI & UX/Interaktive Systeme/Entwurfsprinzipien/Abbruch und Rückgängigmachen von Aktionen.md",
     "docs/main/UI & UX/Interaktive Systeme/Entwurfsprinzipien",
     "docs/main/0. Introduction.md",
-    "docs/main/CleanCode/0. DesignPatterns/Visitor.md",
-    "docs/main/CleanCode/0. DesignPatterns/Template Method.md",
-    "docs/main/CleanCode/0. DesignPatterns/Strategy.md",
-    "docs/main/CleanCode/0. DesignPatterns/State.md",
-    "docs/main/CleanCode/0. DesignPatterns/Singleton.md",
-    "docs/main/CleanCode/0. DesignPatterns/Proxy.md",
-    "docs/main/CleanCode/0. DesignPatterns/Prototype.md",
-    "docs/main/CleanCode/0. DesignPatterns/Observer.md",
-    "docs/main/CleanCode/0. DesignPatterns/Memento.md",
-    "docs/main/CleanCode/0. DesignPatterns/Mediator.md",
-    "docs/main/CleanCode/0. DesignPatterns/Iterator.md",
-    "docs/main/CleanCode/0. DesignPatterns/Flyweight.md",
-    "docs/main/CleanCode/0. DesignPatterns/Factory.md",
-    "docs/main/CleanCode/0. DesignPatterns/Facade.md",
-    "docs/main/CleanCode/0. DesignPatterns/Decorator.md",
-    "docs/main/CleanCode/0. DesignPatterns/Composite.md",
-    "docs/main/CleanCode/0. DesignPatterns/Command.md",
-    "docs/main/CleanCode/0. DesignPatterns/Chain of Responsibility.md",
-    "docs/main/CleanCode/0. DesignPatterns/Builder.md",
-    "docs/main/CleanCode/1. CleanCodeDeveloper/Praktiken",
-    "docs/main/CleanCode/1. CleanCodeDeveloper/Prinzipien",
-    "docs/main/CleanCode/1. CleanCodeDeveloper/Grade",
-    "docs/main/CleanCode/1. CleanCodeDeveloper",
+    "docs/main/CleanCode/DesignPatterns/Visitor.md",
+    "docs/main/CleanCode/DesignPatterns/Template Method.md",
+    "docs/main/CleanCode/DesignPatterns/Strategy.md",
+    "docs/main/CleanCode/CleanCodeDeveloper/Praktiken",
+    "docs/main/CleanCode/CleanCodeDeveloper/Prinzipien",
+    "docs/main/CleanCode/CleanCodeDeveloper/Grade",
+    "docs/main/CleanCode/CleanCodeDeveloper",
     "assets/cleancode130.png",
-    "docs/main/CleanCode/0. DesignPatterns",
     "assets/cleancode1.png",
     "assets/cleancode95.png",
     "assets/cleancode39.png",
@@ -215,8 +241,6 @@
     "assets/cleancode36.png",
     "assets/cleancode35.png",
     "assets/cleancode34.png",
-    "assets/cleancode33.png",
-    "docs/main/CleanCode",
-    "docs/main/CleanCode"
+    "assets/cleancode33.png"
   ]
 }
